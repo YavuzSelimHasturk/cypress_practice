@@ -14,9 +14,7 @@ describe('Searchbox test', () => {
         cy.get('#search_product').type('Sleeveless Dress')
         cy.get('#submit_search').click()
 
-
-       // cy.scrollTo(3500,100)
-       // cy.wait(3000)
+        // aranan urunun listelendigi dogrulanir
         assert(cy.get('.productinfo').should('be.visible'))
 
     });
