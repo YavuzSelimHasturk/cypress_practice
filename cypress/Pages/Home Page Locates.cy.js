@@ -15,5 +15,11 @@ class Homepage{
     getDeleteAccountButton(){
         return cy.get('.shop-menu > .nav > :nth-child(5) > a')
     }
+    getWrongEmailBox(){
+        return cy.get('[data-qa="login-email"]').type('jacehe9099@webonoid.com')
+    }
+    getIncorrectEmailWarning(){
+        return cy.get('.login-form > form > p')
+    }
 }
 export default Homepage

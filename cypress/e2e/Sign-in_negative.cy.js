@@ -1,9 +1,7 @@
+import Homepage from "../Pages/Home Page Locates.cy";
 
 
-import Homepage from "../../Pages/Home Page Locates.cy";
-
-
-describe('Signing with a valid email', () => {
+describe('Signing with a invalid email', () => {
 
     const homePage = new Homepage()
     beforeEach(() => {
@@ -16,11 +14,11 @@ describe('Signing with a valid email', () => {
        
         homePage.getSignUpLink()   
 
-        homePage.getEmailBox()
+        homePage.getWrongEmailBox()
         homePage.getPasswordBox()
         homePage.getLoginButton()
         
-        assert(homePage.getDeleteAccountButton().should('be.visible'))
+        assert(homePage.getIncorrectEmailWarning().should('be.visible'))
 
     });
 });
