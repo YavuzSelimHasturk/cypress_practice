@@ -5,12 +5,14 @@ describe('Cart Test', () => {
     it('Add one product to the cart', () => {
     
         cy.visit('/')
+        // login yapilir
         homePage.getSignUpLink()   
 
         homePage.getEmailBox()
         homePage.getPasswordBox()
         homePage.getLoginButton()
        
+        // search boxda urun aratilir
         cy.get('.shop-menu > .nav > :nth-child(2) > a').click()
         cy.get('#search_product').type('Sleeveless Dress')
         cy.get('#submit_search').click()
